@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Sneakers Adviser</string>
+    <string name="choose_brand_btn">Choose Brand</string>
+    <string name="sneakers_brands">No sneakers brand selected</string>
+
+    <string-array name="sneak_brands">
+        <item>Supra</item>
+        <item>Adidas</item>
+        <item>Puma</item>
+        <item>Saucony</item>
+        <item>Mizuno</item>
+        <item>Asics</item>
+        <item>Reebok</item>
+        <item>Ralph &amp; Loren</item>
+        <item>Polo A.S.S.N.</item>
+        <item>Skechers</item>
+        <item>Next</item>
+    </string-array>
 </resources>
