@@ -13,11 +13,23 @@ class MainActivity : AppCompatActivity() {
 
         val chooseBrand = findViewById<Button>(R.id.choose_brand)
         chooseBrand.setOnClickListener {
-            val brands = findViewById<TextView>(R.id.brands)
             val spinnerBrands = findViewById<Spinner>(R.id.sneakers_brand_spinner)
-//            val setBrand = spinnerBrands.selectedItem.toString()
             val setBrand = spinnerBrands.selectedItem.toString()
-            brands.text = "Sneakers brands is $setBrand"
+            val brandList = getBrands(setBrand)
+
+            val sneakerList = brandList.reduce { str, item -> str + "\n" + item }
+            val brands = findViewById<TextView>(R.id.brands)
+            brands.text = sneakerList
+        }
+    }
+
+    fun getBrands(brand: String): List<String> {
+        return when(brand) {
+            "Supra" -> listOf("Mushka","Bandit", "Society")
+            "Adidas" -> listOf("Stan Smith", "Samba")
+            "Puma" -> listOf("Suede","Porshe")
+            "Nike" -> listOf("Cortez","Jordan")
+            else -> listOf("Gout Stack", "Stanly Epkis")
         }
     }
 }
